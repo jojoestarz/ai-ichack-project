@@ -6,7 +6,9 @@ import PaperPage from './components/PaperPage';
 
 
 function App() {
+  console.log('App works');
   return (
+
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />
