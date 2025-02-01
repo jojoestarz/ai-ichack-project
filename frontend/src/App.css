@@ -1,42 +1,108 @@
-#root {
+/* App.css */
+
+/* Reset some basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body defaults */
+body {
+  font-family: sans-serif;
+  background-color: #102139; /* Dark background */
+  color: #ffffff;           /* Light text */
+}
+
+/* Main container for the page */
+.paperPage {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Page title and subtitle */
+.paperPage h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.paperPage h3 {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  font-weight: normal;
+  color: #bfbfbf; /* slightly lighter text for subtitle */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* White card-like container for the form */
+.formContainer {
+  background: #ffffff;
+  color: #000000;
+  width: 800px;
+  min-height: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+
+  /* Flex column to center form items */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.card {
-  padding: 2em;
+/* The form itself */
+.formContainer form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
 }
 
-.read-the-docs {
-  color: #888;
+/* Labels for each input field */
+.formContainer label {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #333333;
+}
+
+/* Text input, file input, and textarea */
+.formContainer input[type="text"],
+.formContainer textarea {
+  background-color: #35322c;
+  color: #ffffff;
+  border: none;
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 200%;
+  max-width: 500px;  /* Limit input width if you like */
+}
+
+/* Textarea specific styling */
+.formContainer textarea {
+  height: 70px;
+  resize: none; /* Prevent manual resizing */
+}
+
+/* If you add a button inside the form */
+.formContainer button {
+  background-color: #102139;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+.formContainer button:hover {
+  background-color: #d1503f;
 }
